@@ -15,9 +15,13 @@ class AppRoutes {
 
   AppRoutes.init();
 
+  final List<String> _routeNames = [
+    "/home",
+  ];
+
   List<GetPage> get appRoutes => [
         GetPage(
-          name: "/home",
+          name: _routeNames[0],
           page: () => const HomeView(),
         ),
       ];
