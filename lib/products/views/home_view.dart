@@ -1,21 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_tutorial/products/controllers/main_controller.dart';
 
 class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+  final mainController = Get.put(MainController());
+  HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
       body: Center(
-        child: Text(
-          "Counter: 0",
-          style: context.textTheme.headline6,
+        child: Obx(
+          () {
+            return Text(
+              "Counter: ${mainController.counter}",
+              style: context.textTheme.headline6,
+            );
+          },
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          print(mainController.counter);
+          mainController.increaseCounter;
+        },
         child: const Icon(Icons.add),
       ),
     );

@@ -22,7 +22,7 @@ class AppRoutes {
   List<GetPage> get appRoutes => [
         GetPage(
           name: _routeNames[0],
-          page: () => const HomeView(),
+          page: () => HomeView(),
         ),
       ];
 }
