@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_tutorial/core/extensions/ui_extensions.dart';
 import 'package:getx_tutorial/products/controllers/main_controller.dart';
+import 'package:getx_tutorial/products/views/test_view.dart';
 
 class HomeView extends StatelessWidget {
   final mainController = Get.put(MainController());
@@ -10,13 +11,17 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: _appBarLeading,
-        title: _appBarTitle,
-        actions: [_changeTitleButton],
-      ),
+      appBar: _appBar,
       body: _body(context),
       floatingActionButton: _fabButton,
+    );
+  }
+
+  AppBar get _appBar {
+    return AppBar(
+      leading: _appBarLeading,
+      title: _appBarTitle,
+      actions: [_changeTitleButton],
     );
   }
 
@@ -47,7 +52,9 @@ class HomeView extends StatelessWidget {
       children: [
         _counterText(context),
         context.emptySizedHeightBox3x,
-        _deincreaseButton
+        _deincreaseButton,
+        context.emptySizedHeightBox3x,
+        _testPageButton,
       ],
     );
   }
@@ -71,6 +78,13 @@ class HomeView extends StatelessWidget {
     return ElevatedButton(
       onPressed: () => mainController.deincreaseCounter,
       child: Text(label),
+    );
+  }
+
+  ElevatedButton get _testPageButton {
+    return ElevatedButton(
+      onPressed: () => Get.toNamed("/test"),
+      child: const Text("Go to test page."),
     );
   }
 
