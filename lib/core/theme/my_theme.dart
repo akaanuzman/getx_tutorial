@@ -16,8 +16,9 @@ class MyTheme extends IMyTheme {
 
   MyTheme.init();
 
-  ThemeData get themeData => ThemeData(
+  ThemeData get themeDataLigth => ThemeData.light().copyWith(
         textTheme: MyTexts.instance.textTheme,
       );
 
+  ThemeData get themeDataDark => ThemeData.dark().copyWith();
 }
