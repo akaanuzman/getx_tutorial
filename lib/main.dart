@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:getx_tutorial/core/base/base_singleton.dart';
-import 'package:getx_tutorial/features/langs/langs.dart';
-import 'package:getx_tutorial/products/controllers/splash_controller.dart';
+import 'core/base/base_singleton.dart';
+import 'features/langs/langs.dart';
+import 'products/controllers/splash_controller.dart';
 
 void main() async {
   await GetStorage.init();

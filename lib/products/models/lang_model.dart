@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../controllers/splash_controller.dart';
+
 class LangModel {
   final String key;
   final String langCode;
@@ -12,7 +14,8 @@ class LangModel {
     required this.countryCode,
     required this.isSelected,
   }) {
-    Get.deviceLocale?.languageCode == langCode
+    final splashController = Get.put(SplashController());
+    splashController.appLocale.languageCode == langCode
         ? isSelected = true.obs
         : isSelected = false.obs;
   }

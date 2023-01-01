@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_tutorial/core/base/base_singleton.dart';
-import 'package:getx_tutorial/core/extensions/ui_extensions.dart';
-import 'package:getx_tutorial/features/langs/langs.dart';
-import 'package:getx_tutorial/products/controllers/lang_controller.dart';
-import 'package:getx_tutorial/products/controllers/splash_controller.dart';
-import 'package:getx_tutorial/products/models/lang_model.dart';
+import '../../core/base/base_singleton.dart';
+import '../../core/extensions/ui_extensions.dart';
+import '../../features/langs/langs.dart';
+import '../controllers/lang_controller.dart';
+import '../controllers/splash_controller.dart';
+import '../models/lang_model.dart';
 
 class ThemeView extends StatelessWidget with BaseSingleton {
   final SplashController _splashCtrl = Get.put(SplashController());

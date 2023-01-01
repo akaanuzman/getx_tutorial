@@ -1,5 +1,5 @@
 
-import 'package:getx_tutorial/features/constants/app_routes.dart';
+import '../../features/constants/app_routes.dart';
 
 import '../../features/constants/app_constants.dart';
 import '../helpers/ui_globals.dart';

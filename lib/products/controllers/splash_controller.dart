@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:getx_tutorial/core/theme/my_theme.dart';
+import '../../core/theme/my_theme.dart';
 
 class SplashController extends GetxController {
   RxBool status = Get.isDarkMode.obs;

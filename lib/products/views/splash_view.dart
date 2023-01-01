@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_tutorial/products/controllers/splash_controller.dart';
-import 'package:getx_tutorial/products/views/theme_view.dart';
+import '../controllers/splash_controller.dart';
+import 'theme_view.dart';
 
 class SplashView extends StatelessWidget {
   final SplashController _sctrl = Get.put(SplashController());

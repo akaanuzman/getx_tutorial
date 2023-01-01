@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
-import 'package:getx_tutorial/products/views/splash_view.dart';
+
+import '../../products/views/splash_view.dart';
 import '../../products/views/theme_view.dart';
 
 class AppRoutes {

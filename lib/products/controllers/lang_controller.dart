@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:getx_tutorial/products/models/lang_model.dart';
+import '../models/lang_model.dart';
 
 class LangController extends GetxController {
   final box = GetStorage();
