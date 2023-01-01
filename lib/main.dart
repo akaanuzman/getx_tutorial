@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:getx_tutorial/core/base/base_singleton.dart';
+import 'package:getx_tutorial/features/langs/langs.dart';
 import 'package:getx_tutorial/products/controllers/splash_controller.dart';
 
 void main() async {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget with BaseSingleton {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(SplashController());
+    final splashController = Get.put(SplashController());
     return Obx(
       () {
         return GetMaterialApp(
@@ -22,11 +23,13 @@ class MyApp extends StatelessWidget with BaseSingleton {
           initialRoute: constants.initialRoute,
           supportedLocales: constants.supportedLocales,
           localizationsDelegates: constants.localizationsDelegates,
-          theme: controller.theme,
+          theme: splashController.theme,
           darkTheme: theme.themeDataDark,
-          themeMode: ThemeMode.system,
           navigatorKey: constants.navigatorKey,
           getPages: routes.appRoutes,
+          locale: splashController.appLocale,
+          fallbackLocale: constants.fallbackLocale,
+          translations: Langs(),
         );
       },
     );

@@ -4,11 +4,12 @@ import 'package:getx_tutorial/products/controllers/splash_controller.dart';
 import 'package:getx_tutorial/products/views/theme_view.dart';
 
 class SplashView extends StatelessWidget {
-  const SplashView({super.key});
+  final SplashController _sctrl = Get.put(SplashController());
+
+  SplashView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    SplashController _sctrl = Get.put(SplashController());
     return Scaffold(
       body: FutureBuilder(
         future: _sctrl.loadSplash,
@@ -27,7 +28,7 @@ class SplashView extends StatelessWidget {
   Center _body(BuildContext context) {
     return Center(
       child: Text(
-        "Getx Tutorial",
+        "splashTitle".tr,
         style: context.textTheme.headline6,
       ),
     );

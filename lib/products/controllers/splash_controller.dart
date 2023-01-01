@@ -9,9 +9,16 @@ class SplashController extends GetxController {
   ThemeData get theme => status.value
       ? MyTheme.instance.themeDataDark
       : MyTheme.instance.themeDataLigth;
+  Locale get appLocale {
+    if (box.read("appLang") != null) {
+      String result = box.read("appLang");
+      List<String> localeCodes = result.split("_");
+      return Locale(localeCodes.first, localeCodes.last);
+    }
+    return Get.deviceLocale!;
+  }
 
   Future<void> get loadSplash async {
-    // await box.remove("themeMode");
     final bool result = await box.read("themeMode");
     status.value = result;
   }

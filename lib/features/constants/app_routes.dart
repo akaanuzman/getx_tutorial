@@ -23,7 +23,7 @@ class AppRoutes {
   List<GetPage> get appRoutes => [
         GetPage(
           name: _routeNames[0],
-          page: () => const SplashView(),
+          page: () => SplashView(),
         ),
         GetPage(
           name: _routeNames[1],
