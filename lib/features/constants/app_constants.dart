@@ -1,5 +1,8 @@
 
-import '../navigation/navigation_service.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../../core/navigation/navigation_service.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AppConstants {
@@ -16,10 +19,11 @@ class AppConstants {
   AppConstants.init();
 
   String get appTitle => "Getx Tutorial";
-  String get initialRoute => "/home";
+  String get initialRoute => "/splash";
   bool get debugShowCheckedModeBanner => false;
   get localizationsDelegates => AppLocalizations.localizationsDelegates;
   get supportedLocales => AppLocalizations.supportedLocales;
   get navigatorKey => NavigationService.navigatorKey;
-
+  Locale? get deviceLocale => Get.deviceLocale;
+  get fallbackLocale => const Locale('en', 'US');
 }
